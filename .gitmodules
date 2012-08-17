@@ -1,6 +1,0 @@
-[submodule "blocks/user_preferences"]
-	path = blocks/user_preferences
-	url = /Library/WebServer/Documents/moodle/blocks/user_preferences
-[submodule "mod/decisiontree"]
-	path = mod/decisiontree
-	url = /Library/WebServer/Documents/moodle/mod/decisiontree
