@@ -1,0 +1,12 @@
+[submodule "blocks/case_repository"]
+	path = blocks/case_repository
+	url = /Library/WebServer/Documents/moodle/blocks/case_repository
+[submodule "blocks/semantic_web"]
+	path = blocks/semantic_web
+	url = /Library/WebServer/Documents/moodle/blocks/semantic_web
+[submodule "blocks/user_preferences"]
+	path = blocks/user_preferences
+	url = /Library/WebServer/Documents/moodle/blocks/user_preferences
+[submodule "mod/decisiontree"]
+	path = mod/decisiontree
+	url = /Library/WebServer/Documents/moodle/mod/decisiontree
