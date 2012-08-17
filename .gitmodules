@@ -1,0 +1,12 @@
+[submodule "blocks/case_repository"]
+	path = blocks/case_repository
+	url = https://AndreScherl@github.com/AndreScherl/case_repository.git
+[submodule "blocks/semantic_web"]
+	path = blocks/semantic_web
+	url = https://AndreScherl@github.com/AndreScherl/semantic_web.git
+[submodule "blocks/user_preferences"]
+	path = blocks/user_preferences
+	url = https://AndreScherl@github.com/AndreScherl/user_preferences.git
+[submodule "mod/decisiontree"]
+	path = mod/decisiontree
+	url = https://AndreScherl@github.com/AndreScherl/decisiontree.git
