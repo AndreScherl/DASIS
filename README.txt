@@ -16,9 +16,16 @@ DASIS contains three essential elements:
  2. Block “Learner Preferences”
  3. Block “Learner Adaptation”
 
-Semantic Web is necessary for interdisciplinary navigation and works without adaptation but can be enhanced with adaptive navigation support. Adaptation is realized by the blocks Learner Adaptation and Learner Preferences. Both blocks were originally developed by Gert Sauerstein[2]. They were ported to Moodle 2.0+ and fitted to the needs of DASIS.
+Semantic Web is necessary for interdisciplinary navigation and works without adaptation but can be enhanced with adaptive navigation support. To generate the concept maps the visualization framework 'protovis' (http://mbostock.github.com/protovis/) is used. Adaptation is realized by the blocks Learner Adaptation and Learner Preferences. Both blocks were originally developed by Gert Sauerstein[2]. They were ported to Moodle 2.0+ and fitted to the needs of DASIS.
 
 We used the module "Decision Tree" (mod/decisiontree) to create and provide learning style questionnaires. This is not necessary to use the features of DASIS. It is no assessment ready to use because all the questions have to be entered first.
+
+
+LICENSE
+*******
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 
 INSTALLATION
