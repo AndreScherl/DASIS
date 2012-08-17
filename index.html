@@ -13,14 +13,14 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Dasis by AndreScherl</title>
+    <title>DASIS by AndreScherl</title>
   </head>
 
   <body>
     <header>
       <div class="inner">
-        <h1>Dasis</h1>
-        <h2>Dynamic Addressee Specific Information System (extension for the learning management system moodle)</h2>
+        <h1>DASIS</h1>
+        <h2>Dynamic Addressee Specific Information System</h2>
         <a href="https://github.com/AndreScherl/DASIS" class="button"><small>View project on</small>GitHub</a>
       </div>
     </header>
@@ -28,33 +28,60 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h3>Welcome to GitHub Pages.</h3>
+          <h3>About</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>DASIS is a package of Moodle[1] extensions to support students in making their individual way through hypermedia learning contents.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p>Main features are:
+<ul>
+ <li>concept map-based navigation between courses</li>
+ <li>direct guidance navigation with learning paths</li>
+ <li>adaptive navigation support</li>
+</ul></p>
+
+<p>DASIS contains three essential elements:
+<ol>
+<li>Block “Navigation Web”</li>
+<li>Block “Learner Preferences”</li>
+<li>Block “Learner Adaptation”</li>
+</ol></p>
+<p>Semantic Web is necessary for interdisciplinary navigation and works without adaptation but can be enhanced with adaptive navigation support. To generate the concept maps the visualization framework 'protovis' (http://mbostock.github.com/protovis/) is used. Adaptation is realized by the blocks Learner Adaptation and Learner Preferences. Both blocks were originally developed by Gert Sauerstein[2]. They were ported to Moodle 2.0+ and fitted to the needs of DASIS.</p>
+<p>We used the module "Decision Tree" (mod/decisiontree) to create and provide learning style questionnaires. This is not necessary to use the features of DASIS. It is no assessment ready to use because all the questions have to be entered first.</p>
+
+<h3>License</h3>
+
+<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.<br />
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.<br />
+You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.</p>
+
+<h3>Installation</h3>
+<ol>
+<li>Download the files</li>
+<li>Unzip the package if necessary</li>
+<li>Copy the directories “semantic_web”, “user_preferences”, and “case_repository” into the directory “blocks” of your moodle directory</li>
+<li>Paste the following lines of code at the end of the file /admin/settings/plugins.php
+<pre><code>
+/**
+ * Settings for block user_preferences via external page
+ *
+ * @package  DASIS, Andre Scherl 
+ */
+if ($hassiteconfig) {
+  $ADMIN->add('blocksettings', new admin_externalpage('dasis_user_preferences', get_string('pluginname', 'block_user_preferences'), $CFG->wwwroot.'/blocks/user_preferences/global_config.php'));
+	$ADMIN->add('blocksettings', new admin_externalpage('dasis_case_repository', get_string('pluginname', 'block_case_repository'), $CFG->wwwroot.'/blocks/case_repository/settings_case_repository.php'));
+}
 </code></pre>
+</li>
+<li>Go to your Moodle site and choose “Messages” within the administration menu. The plugin installation process should start.</li>
+<li>If installation is finished, navigate to Plugins ⇒ Blocks ⇒ Learner Preferences to trigger final settings. After the page loaded completely, the installation is complete.</li><ol>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h3>More Info and User Manual</h3>
+<p>More information can be found in the user manual (dasis.pdf) within this package.</p>
 
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
+<p>
+[1]  “About Moodle,” docs.moodle.org. [Online]. Available: http://docs.moodle.org/22/en/About_Moodle. [Accessed: 14-Mar.-2012].<br />
+[2]	G. Sauerstein, KI-Ansätze zur Lerner-Adaption in Lern-Management-Systemen, 2007.
+</p>
 
         <aside id="sidebar">
           <a href="https://github.com/AndreScherl/DASIS/zipball/master" class="button">
