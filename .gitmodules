@@ -1,6 +1,3 @@
-[submodule "blocks/semantic_web"]
-	path = blocks/semantic_web
-	url = /Library/WebServer/Documents/moodle/blocks/semantic_web
 [submodule "blocks/user_preferences"]
 	path = blocks/user_preferences
 	url = /Library/WebServer/Documents/moodle/blocks/user_preferences
